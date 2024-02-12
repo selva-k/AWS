@@ -65,4 +65,33 @@ AWS offers various storage classes designed for different use cases, based on ac
 - **Use Cases**: Hybrid storage integration for backup, archiving, disaster recovery.
 - **Features**: Connects on-premises environments to AWS storage services.
 
+
+# Comparative Study: AWS EBS vs. EFS vs. S3
+
+| Feature               | AWS EBS                                      | AWS EFS                                        | AWS S3                                        |
+|-----------------------|----------------------------------------------|------------------------------------------------|-----------------------------------------------|
+| **Type**              | Block Storage                                | File Storage                                   | Object Storage                                |
+| **Use Cases**         | Databases, boot volumes for EC2 instances    | Shared file storage, content management        | Data lakes, web hosting, backup and archive   |
+| **Performance**       | High IOPS, low latency                       | Lower IOPS than EBS, higher than S3, scalable  | High durability, designed for throughput       |
+| **Durability**        | 99.999%                                      | 99.999999999% (11 9's) across multiple AZs     | 99.999999999% (11 9's)                         |
+| **Availability**      | 99.95% - 99.99%                              | 99.99%                                         | 99.99%                                         |
+| **Scalability**       | Size up to 64 TiB per volume                 | Scales automatically, petabytes of capacity    | Unlimited storage, individual objects up to 5 TiB |
+| **Pricing Model**     | Volume size, IOPS, throughput                | Storage capacity used                          | Storage capacity, requests, and data transfer |
+| **Access**            | Attached to a single EC2 instance at a time  | Multiple instances across AZs                  | Via HTTP/S, from anywhere                     |
+| **Data Consistency**  | Immediate                                    | Immediate for read after write                 | Eventual for overwrite PUTS and DELETES       |
+| **Security**          | Encryption at rest and in transit            | Encryption at rest and in transit              | Encryption at rest and in transit             |
+| **Backup and Snapshot** | Snapshots to S3                             | File system backups                            | Bucket versioning, cross-region replication   |
+
+## Key Takeaways
+
+- **AWS EBS** is best suited for high-performance block storage use cases such as databases and boot volumes for EC2 instances, where low latency and high throughput are critical.
+- **AWS EFS** offers a scalable, elastic file storage solution ideal for applications that require shared access to file data across multiple instances or services.
+- **AWS S3** provides highly durable and scalable object storage, making it suitable for storing and retrieving any amount of data for a wide range of use cases, from websites to data analytics.
+
+This table provides a high-level comparison to help choose the right AWS storage option based on specific requirements and use cases.
+
 By understanding the specific characteristics and use cases of each AWS storage class, organizations can optimize their storage strategy to align with operational needs and budget constraints.
+
+
+
+
