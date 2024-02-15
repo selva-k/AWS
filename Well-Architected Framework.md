@@ -2,6 +2,15 @@
 
 The AWS Well-Architected Framework provides a consistent approach for customers and partners to evaluate architectures and implement designs that will scale over time. It consists of five pillars which represent key concepts that are critical to designing and operating reliable, secure, efficient, and cost-effective systems in the cloud.
 
+## What is the AWS Well-Architected Framework?
+The AWS Well-Architected Framework is a comprehensive guide that outlines design principles, best practices, and architectural recommendations for optimizing workloads on AWS. It aims to align cloud architectures with AWS's best practices, covering operations, security, reliability, performance efficiency, cost optimization, and sustainability. This framework is a tool for enhancing IT infrastructure, ensuring systems are well-designed and capable of driving business success. It consists of six pillars that guide you through the trade-offs and decisions in building cloud architectures, teaching you how to create secure, efficient, and reliable systems on AWS. It also offers a method for evaluating your architectures against these best practices to pinpoint areas for improvement.
+
+## How to Use the AWS Well-Architected Framework?
+The AWS Well-Architected Framework is available as a detailed PDF document or online, encompassing best practices, design patterns, and guiding questions for evaluating your cloud architecture. It's particularly useful for ensuring the security and compliance of systems handling sensitive data, like financial information, before production deployment. For example, by consulting the security pillar, you can assess how well your architecture protects data, manages permissions, and detects security incidents.
+
+Utilizing the framework involves answering evaluative questions that illuminate the strengths and weaknesses of your AWS Cloud architecture. Questions such as "How do you protect your data at rest?" or "How do you manage identities?" help identify potential vulnerabilities, like the lack of encryption or inadequate data protection measures during transit. By addressing these questions and adhering to the framework's guidance, you can rectify shortcomings in your architecture, enhancing security and overall system integrity.
+
+
 ## The Five Pillars of the AWS Well-Architected Framework
 
 1. **Operational Excellence**: Focus on running and monitoring systems to deliver business value and continually improve processes and procedures.
